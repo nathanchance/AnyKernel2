@@ -43,7 +43,7 @@ die() {
 
 
 # Don't even think about flashing on Treble
-treble=$(file_getprop /system/build.prop "ro.treble.enabled");
+treble=$(file_getprop /system/build.prop "ro.treble.enabled=true");
 if [ ! -z $treble ]; then
   die "Flash Kernel is not compatible with Treble yet!";
 fi;
